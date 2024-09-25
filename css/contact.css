@@ -14,7 +14,7 @@ p {
     margin: 0;
 }
 body {
-    padding: 10px 40px 10px 40px;
+    padding: 50px 40px 10px 40px;
     flex-direction: column;
     align-items: center;
 }
@@ -43,6 +43,7 @@ body {
 }
 .first_button_form:hover {
     color: white;
+    text-decoration: underline;
 }
 .first_button_form:hover::before {
     transform: scaleX(1);
@@ -55,8 +56,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 101%;
-    height: 101%;
+    width: 100%;
+    height: 100%;
     background: #8c6ae4;
     z-index: -1;
     border-radius: 5px;
@@ -120,8 +121,9 @@ header > div {
 .header_search > i {
     transform: translateY(55%);
 }
-.header_user > i {
+.header_user > a > i {
     transform: translateY(55%);
+    color: black;
 }
 .header_store {
     background-color: #9F78FF;
@@ -139,3 +141,64 @@ header > div {
     transform: translateY(10%);
 }
 /* =============================END HEADER============================== */
+/* =============================START FOOTER============================== */
+.service-container {
+    padding: 140px 20px 130px 20px;
+    background-color: #f4f5f9;
+}
+
+.footer-container {
+    background-color: #1D2547;
+}
+
+.social-icon > a{
+    border: 1px solid white;
+}
+.quick-links > h3 {
+    font-size: 20px;
+}
+.quick-links > ul {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
+}
+.quick-links > ul > li {
+    padding-top: 0.5em;
+}
+.quick-links > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+}
+/* =============================END FOOTER============================== */
+@media screen and (max-width:768px){
+    .header_logo {
+        display: none;
+    }
+    .header_social {
+        display: none !important;
+    }
+    .first_button_form {
+        padding: 20;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .shionhouse-footer {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .header_menu > nav > ul {
+        gap: 8px !important;
+    }
+    .header_user_find_store > ul {
+        gap: 5px !important;
+    }
+    .first_button_form {
+        padding: 15px 10px;
+        font-size: 16px;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+}

@@ -14,7 +14,7 @@ p {
     margin: 0;
 }
 body {
-    padding: 10px 40px 10px 40px;
+    padding: 50px 40px 10px 40px;
     flex-direction: column;
     align-items: center;
 }
@@ -43,6 +43,7 @@ body {
 }
 .first_button_form:hover {
     color: white;
+    text-decoration: underline;
 }
 .first_button_form:hover::before {
     transform: scaleX(1);
@@ -55,8 +56,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 101%;
-    height: 101%;
+    width: 100%;
+    height: 100%;
     background: #8c6ae4;
     z-index: -1;
     border-radius: 5px;
@@ -120,8 +121,9 @@ header > div {
 .header_search > i {
     transform: translateY(55%);
 }
-.header_user > i {
+.header_user > a > i {
     transform: translateY(55%);
+    color: black;
 }
 .header_store {
     background-color: #9F78FF;
@@ -144,8 +146,9 @@ header > div {
     margin-bottom: 10%;
 }
 .carousel-caption > div > p {
-    font-size: 120px;
-    font-weight: 1000;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 1em;
     letter-spacing: 2px;
     font-family: Kaushan;
     margin-bottom: 2%;
@@ -172,12 +175,15 @@ header > div {
     font-size: 45px;
     font-weight: 600;
     letter-spacing: 2px;
-    background-color: rgb(34, 34, 34, 0.7);
+    background-color: rgb(34, 34, 34, 0.5);
 }
 .btn {
     position: absolute;
     transform: translateX(-50%);
     top: 45%;
+}
+.store-btn {
+    cursor: pointer;
 }
 /* =============================POPULAR END============================== */
 /* =============================NEW ARRIVALS START============================== */
@@ -263,8 +269,8 @@ header > div {
     position: absolute;
     left: 0;
     top: 0;
-    width: 101%;
-    height: 101%;
+    width: 100%;
+    height: 100%;
     background: #9F78FF;
     z-index: -1; 
     transition: transform 0.5s;
@@ -274,6 +280,7 @@ header > div {
     transform: scaleY(0);
     border-radius: 0;
 }
+/* =============================NEW ARRIVALS END============================== */
 /* ========================================== COLLECTION ABOUT US START ========================================== */
 .collection-card {
     object-fit: cover;
@@ -283,9 +290,10 @@ header > div {
 }
 .card-content-collection {
     position: absolute;
-    left: 0;
-    top: 25%;
+    left: -7%;
+    top: -60%;
     font-size: 65px;
+    padding: 0 4em;
     font-weight: 400;
     letter-spacing: 2px;
     font-family: Kaushan;
@@ -294,12 +302,67 @@ header > div {
 }
 .btn-collection {
     position: absolute;
-    top: 75%;
-    left: 50%;
+    top: 25%;
+    left: 48%;
 }
 /* ========================================== COLLECTION ABOUT US END ========================================== */
-/* =============================NEW ARRIVALS END============================== */
-@media screen and (min-width:768px){
+/*  ========================================== READ MORE START ==========================================  */
+.readmore-card {
+    position: relative;
+}
+.card-img-overlay {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+}
+.readmore-text {
+    font-size: 35px;
+    font-weight: 450;
+    line-height: 45px;
+}
+.readmore-button {
+    position: absolute;
+    top: 55%;
+    left: 15%;
+}
+/*  ========================================== READ MORE END ==========================================  */
+
+.service-container {
+    padding: 140px 20px 130px 20px;
+    background-color: #f4f5f9;
+}
+
+.footer-container {
+    background-color: #1D2547;
+}
+
+.social-icon > a{
+    border: 1px solid white;
+}
+.quick-links > h3 {
+    font-size: 20px;
+}
+.quick-links > ul {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
+}
+.quick-links > ul > li {
+    padding-top: 0.5em;
+}
+.quick-links > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+@media screen and (max-width:768px){
+    .header_logo {
+        display: none;
+    }
+    .header_social {
+        display: none !important;
+    }
     .first_button_form {
         padding: 20;
         font-weight: 500;
@@ -308,7 +371,58 @@ header > div {
     .carousel-caption > div > p {
         font-size: 40px;
         font-weight: 700;
-        margin-bottom: 0;
+        margin-bottom: 0.5em;
+    }
+    .card-content-collection {
+        top: -60%;
+        font-size: 35px;
+    }
+    .card-img-overlay {
+        top: 45%;
+    }
+    .readmore-text {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .readmore-button {
+        margin-top: 0.5em;
+        font-size: 16px;
+        padding: 18px 20px;
+        left: 28%;
+    }
+    .shionhouse-footer {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .header_menu > nav > ul {
+        gap: 8px !important;
+    }
+    .header_user_find_store > ul {
+        gap: 5px !important;
+    }
+    .carousel-caption > div {
+        display: none;
+    }
+    .first_button_form {
+        padding: 15px 10px;
+        font-size: 16px;
+    }
+    .card-content-collection {
+        font-size: 24px;
+    }
+    .readmore-container {
+        gap: 10px !important;
+    }
+    .readmore-text {
+        font-size: 14px;
+    }
+    .readmore-button {
+        font-size: 14px;
+    }
+    .footer-container {
+        flex-direction: column;
     }
 }
 

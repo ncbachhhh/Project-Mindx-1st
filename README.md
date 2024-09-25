@@ -18,4 +18,6 @@ Thống nhất làm responsive cho 3 màn:
 - 768px - md
 - 576px - sm
 
+Đã update thanh header và footer, mọi người chỉ cần code main!
 
+Update 25/9/2024
