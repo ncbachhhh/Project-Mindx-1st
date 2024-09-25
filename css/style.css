@@ -3,17 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+ul {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+p {
+    margin: 0;
+}
 body {
-    padding: 10px 50px 10px 50px;
+    padding: 10px 40px 10px 40px;
+    flex-direction: column;
+    align-items: center;
 }
 .first_button_form {
     background: #9F78FF;
     text-transform: capitalize;
-    padding: 27px 44px;
+    padding: 27px 25px;
     color: #fff;
     cursor: pointer;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     display: inline-block;
     line-height: 1;
     -moz-user-select: none;
@@ -55,25 +67,28 @@ body {
     transform: scaleX(0);
     border-radius: 0px;
 }
+.checked {
+    color: orange;
+}
 /* ===============================HEADER============================== */
+/* header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+} */
 header > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 /* LEFT HEADER */
-.left_header_container {
+.header_menu > nav > ul  {
     display: flex;
     align-items: center;
-    gap: 20px;
-
-}
-.header_menu > nav > ul {
-    display: flex;
-    list-style-type: none;
 }
 .header_menu > nav > ul > li {
-    padding: 39px 19px 39px 19px;
+    font-weight: 600;
 }
 .header_menu > nav > ul > li > a {
     cursor: pointer;
@@ -83,16 +98,6 @@ header > div {
     color: black;
 }
 /* RIGHT HEADER */
-.right_header_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.header_social {
-    display: flex;
-    gap: 20px;
-}
 .header_social > a {
     border: 1px solid rgb(27, 24, 24);
     padding: 10px;
@@ -103,11 +108,6 @@ header > div {
 }
 .header_social > a > i {
     color: #1D2547;
-}
-.header_user_find_store > ul{
-    display: flex;
-    list-style-type: none;
-    gap: 15px
 }
 .header_search, .header_user{
     width: 40px;
@@ -138,118 +138,105 @@ header > div {
     color: white;
     transform: translateY(10%);
 }
-.popular_img_container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-grow: 1;
+/* =============================END HEADER============================== */
+/* =============================CAROUSEL START============================== */
+.carousel-caption > div {
+    margin-bottom: 10%;
 }
-.popular_img_1,
-.popular_img_2,
-.popular_img_3,
-.popular_img_4 {
+.carousel-caption > div > p {
+    font-size: 120px;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    font-family: Kaushan;
+    margin-bottom: 2%;
+}
+.c-img {
+    width: 100%;
+    object-fit: cover;
+}
+/* =============================CAROUSEL END============================== */
+/* =============================POPULAR START============================== */
+.popular-img {
+    position: relative;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.img-cap {
+    font-family: Kaushan;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background-color: rgb(34, 34, 34, 0.7);
+}
+.btn {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 45%;
+}
+/* =============================POPULAR END============================== */
+/* =============================NEW ARRIVALS START============================== */
+.new-arrivals-store {
     justify-content: center;
     align-items: center;
-    position: relative;
 }
-
-.button_shop_now {
-    background-color: #9F78FF;
-    position: absolute;
-    top: 45%;
-    border-radius: 5px;
-    transform: translateY(-50%);
-}
-.button_shop_now > a {
-    font-size: 18px;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-.under_text_popular {
-    font-size: 45px;
-    color: white;
-    background-color: rgb(80, 78, 78);
-    opacity: 1;
-    width: 100%;
-
-}
-.under_text_popular > p {
-    text-align: center;
-    font-family: 'Kaushan';
-}
-.new_arrival_title {
+.new-arrival-title-content {
     font-size: 50px;
     font-weight: 700;
     color: #140C40;
-    font-family: 'Kaushan' !important; 
+    font-family: 'Kaushan'; 
     text-align: center;
-    margin: 50px 0 50px 0;
+}
+.new-arrivals-product {
+    padding: 0;
+    margin: 10px;
+    border: 0.5px solid grey;
+    display: inline-block;
 
 }
-.new_arrival_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.checked {
-    color: orange;
-}
-.single-new-arrival {
+.popular-img {
     position: relative;
-    border: 0.1px solid rgb(189, 189, 189);
+    object-fit: cover;
 }
-.new_arrival {
-    /* display: flex;
-    flex-wrap: wrap; */
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
-    gap: 50px
-}
-.icon_favourite_card {
+.store-btn {
     position: absolute;
-    top: 3%;
-    left: 78%;
+    right: 0;
+    top: 1;
 }
 .popular-caption {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 5px;
-    padding: 10px 0 10px 0;
+    margin-top: 15px;
+    padding: 0 0 40px 0; 
+    display: inline-block;
 }
-.price {
-    color: #444444;
-    font-size: 18px;
-    font-weight: 500;
+.popular-caption > h3 > a {
+    color: #140C40;
+    font-size: 22px;
 }
-.product_name {
-    font-size: 20px;
-    font-weight: 500;
-    text-decoration: underline transparent;
-    transition: .3s;
-    font-family: "Poppins", sans-serif;
-    color: inherit;
-}
-.product_name:hover {
+.popular-caption > h3 > a:hover {
     text-decoration: underline;
 }
-.icon_favourite_card {
-    cursor: pointer;
+.rating {
+    margin-bottom: 10px;
+}
+.popular-caption > span {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 .btn_browse_more_container {
-    margin: 70px 0 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
 .btn_browse_more {
+    margin-top: 20px;
+    text-align: center;
     border: 1px solid #9F78FF;
     color: #9F78FF;
     background: none;
@@ -287,64 +274,42 @@ header > div {
     transform: scaleY(0);
     border-radius: 0;
 }
-.collection_section {
-    text-align: center;
+/* ========================================== COLLECTION ABOUT US START ========================================== */
+.collection-card {
+    object-fit: cover;
     position: relative;
-    width: 100%;
-}
-.collection_section {
-    text-align: center;
-}
-.collection_section > img {
-    width: 100%;
-}
-.collection_section > div {
-    position: absolute;
-    top: 30%;
-    width: 100%;
-}
-.collection_section > div > p {
-    font-family: "Cinzel", serif;
-    font-style: normal;
-    font-weight: 500;
-    color: #fff;
-    font-size: 70px;
-    line-height: 1.2;
-    margin-bottom: 30px;
-}
-.establish_fact_container {
     display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+    flex-direction: column;
 }
-.establish_fact_container > div {
-    position: relative;
-}
-.establish_fact_container > div > div {
+.card-content-collection {
     position: absolute;
-    top: 50%;
-    padding: 50px;
-}
-.establish_fact_container > div > div > p {
-    color: white;
-    font-size: 34px;
+    left: 0;
+    top: 25%;
+    font-size: 65px;
     font-weight: 400;
-    display: block;
-    line-height: 44px;
-    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-family: Kaushan;
+    color: white;
+    text-align: center;
 }
-/* =========================FOOTER========================== */
-.service_container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 140px 30px 130px 30px;
+.btn-collection {
+    position: absolute;
+    top: 75%;
+    left: 50%;
 }
-h5 {
-    font-weight: 9000;
-    margin-bottom: 12px;
-    display: block;
-    text-transform: capitalize;
-    color: #2B2B2B;
-    font-family: "Poppins", sans-serif;
+/* ========================================== COLLECTION ABOUT US END ========================================== */
+/* =============================NEW ARRIVALS END============================== */
+@media screen and (min-width:768px){
+    .first_button_form {
+        padding: 20;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .carousel-caption > div > p {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
 }
+
+              
