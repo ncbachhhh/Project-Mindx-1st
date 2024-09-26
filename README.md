@@ -1,9 +1,9 @@
 Đây là project cuối khóa 1 Mindx
 
 Trên git:
-main - Chiến Bách
-dev_01 - Kiều Huy
-dev_02 - Anh Hiếu
+- main - Chiến Bách
+- dev_01 - Kiều Huy
+- dev_02 - Anh Hiếu
 
 Lưu ý: 
 - Thống nhất sử dụng :
@@ -20,4 +20,4 @@ Thống nhất làm responsive cho 3 màn:
 
 Đã update thanh header và footer, mọi người chỉ cần code main!
 
-Update 25/9/2024
+Update 26/9/2024
