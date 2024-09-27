@@ -162,6 +162,9 @@ header > div {
 }
 /* =============================SIDEBAR START============================== */
 /* =============================CAROUSEL START============================== */
+.carousel {
+    margin-top: 1000px;
+}
 .carousel-caption > div {
     margin-bottom: 10%;
 }
