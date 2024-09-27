@@ -14,9 +14,15 @@ p {
     margin: 0;
 }
 body {
-    padding: 50px 40px 10px 40px;
+    padding: 0px 40px 10px 40px;
     flex-direction: column;
     align-items: center;
+}
+header {
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    padding: 30px 40px;
 }
 .first_button_form {
     background: #9F78FF;
@@ -141,6 +147,20 @@ header > div {
     transform: translateY(10%);
 }
 /* =============================END HEADER============================== */
+/* =============================SIDEBAR START============================== */
+.sidebar-icon {
+    text-align: center;
+}
+.sidebar-container {
+    background-color: darkslateblue;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: none;
+}
+.sidebar-menu {
+    display: none;
+}
+/* =============================SIDEBAR START============================== */
 /* =============================CAROUSEL START============================== */
 .carousel-caption > div {
     margin-bottom: 10%;
@@ -396,11 +416,31 @@ header > div {
     }
 }
 @media screen and (max-width: 576px) {
+    
     .header_menu > nav > ul {
         gap: 8px !important;
     }
     .header_user_find_store > ul {
         gap: 5px !important;
+    }
+    header > div {
+        justify-content: space-between !important;
+    }
+    .header_menu {
+        display: none;
+    }
+    .sidebar-container {
+        display: block;
+    }
+    .sidebar-menu {
+        background-color: darkslateblue;
+        padding: 10px 15px;
+        position: fixed;
+        z-index: 1000;
+        display: block;
+        left: 2.44em;
+        top: 4.3em;
+        border-radius: 0 0 10px 10px;
     }
     .carousel-caption > div {
         display: none;
