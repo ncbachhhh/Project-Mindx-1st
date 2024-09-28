@@ -117,18 +117,18 @@ header > div {
     color: #1D2547;
 }
 .header_search, .header_user{
-    width: 40px;
+    padding: 0 13px;
     height: 40px;
     text-align: center;
     background-color: rgb(235, 229, 243);
-    border-radius: 50%;
+    border-radius: 20px;
     cursor: pointer;
 }
 .header_search > i {
     transform: translateY(55%);
 }
 .header_user > a > i {
-    transform: translateY(55%);
+    transform: translateY(-20%);
     color: black;
 }
 .header_store {
@@ -161,6 +161,9 @@ header > div {
     display: none;
 }
 /* =============================SIDEBAR START============================== */
+/* =============================CART START============================== */
+
+/* =============================CART END============================== */
 /* =============================CAROUSEL START============================== */
 .carousel-caption > div {
     margin-bottom: 10%;
@@ -221,9 +224,8 @@ header > div {
 .new-arrivals-product {
     padding: 0;
     margin: 10px;
-    border: 0.5px solid grey;
-    display: inline-block;
-
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .popular-img {
     position: relative;
@@ -437,10 +439,10 @@ header > div {
         padding: 10px 15px;
         position: fixed;
         z-index: 1000;
-        display: block;
-        left: 2.44em;
-        top: 4.3em;
-        border-radius: 0 0 10px 10px;
+        display: none;
+        left: 2.5em;
+        top: 4.25em;
+        border-radius: 10px;
     }
     .carousel-caption > div {
         display: none;

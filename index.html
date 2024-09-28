@@ -23,7 +23,7 @@
     <header class="w-100 d-flex justify-content-center align-items-center">
       <!-- place navbar here -->
       <div class="sidebar-container">
-        <div class="sidebar-icon">
+        <div class="sidebar-icon" id="sidebar-icon">
           <i class="fa-solid fa-bars"></i>
         </div>
       </div>
@@ -92,10 +92,11 @@
                 </div>
               </li>
               <li>
-                <div class="header_user">
-                  <a href="signup.html">
-                    <i class="fa-solid fa-user"> </i>
+                <div class="header_user d-flex justify-content-center align-items-center">
+                  <a href="signup.html" class="">
+                    <i class="fa-solid fa-user"></i>
                   </a>
+                  <p id="login_check">ădawd</p>
                 </div>
               </li>
             </ul>
@@ -103,8 +104,8 @@
         </div>
       </div>
     </header>
-    <div class="sidebar-menu">
-      <ul class="d-flex flex-column justify-content-center align-items-end gap-4">
+    <div class="sidebar-menu" id="sidebar-menu">
+      <ul class="d-flex flex-column justify-content-center align-items-start gap-4">
         <li>
           <a href="index.html">
             <p>HOME</p>
@@ -131,6 +132,9 @@
           </a>
         </li>
       </ul>
+    </div>
+    <div class="shopping-cart">
+
     </div>
     <main>
       <!-- ========================================== Carousel Start ========================================== -->
@@ -444,95 +448,7 @@
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- SCRIPT ADD PRODUCT -->
-    <script defer>
-      let containerProduct = document.getElementById("wrapperProduct");
-      console.log(containerProduct, "el");
-
-      const listProduct = [
-        {
-          img: "./imgs/gallery/arrival1.png",
-          name: "Knitted Jumper",
-          star: 5,
-          price: "$ 300",
-        },
-        {
-          img: "./imgs/gallery/arrival2.png",
-          name: "Knitted Jumper",
-          star: 5,
-          price: "$ 300",
-        },
-        {
-          img: "./imgs/gallery/arrival3.png",
-          name: "Knitted Jumper",
-          star: 5,
-          price: "$ 300",
-        },
-        {
-          img: "./imgs/gallery/arrival4.png",
-          name: "Knitted Jumper",
-          star: 5,
-          price: "$ 300",
-        },
-        {
-          img: "./imgs/gallery/arrival5.png",
-          name: "Knitted Jumper",
-          star: 5,
-          price: "$ 300",
-        },
-        {
-          img: "./imgs/gallery/arrival6.png",
-          name: "Knitted Jumper",
-          star: 5,
-          price: "$ 300",
-        },
-        {
-          img: "./imgs/gallery/arrival7.png",
-          name: "Knitted Jumper",
-          star: 5,
-          price: "$ 300",
-        },
-        {
-          img: "./imgs/gallery/arrival8.png",
-          name: "Knitted Jumper",
-          star: 5,
-          price: "$ 300",
-        },
-        {
-          img: "./imgs/gallery/arrival1.png",
-          name: "Knitted Jumper",
-          star: 5,
-          price: "$ 300",
-        },
-      ];
-      let arrElProduct = "";
-      for (let i = 0; i < listProduct.length; i++) {
-        let star = "";
-
-        for (let j = 0; j < listProduct[i].star; j++) {
-          star += ' <i class="checked fas fa-star"></i>';
-        }
-
-        const el = `<div class="new-arrivals-product col-xl-3 col-lg-3 col-md-6 col-sm-6">
-            <div class="single-new-arrival mb-50 text-center">
-              <div class="popular-img">
-                <img src="${listProduct[i].img}" alt="" />
-                <div class="favorit-items store-btn">
-                  <img src="./imgs/gallery/favorit-card.png" alt="" />
-                </div>
-              </div>
-              <div class="popular-caption">
-                <h3><a href="shop.html">${listProduct[i].name}</a></h3>
-                <div class="rating mb-10">
-                  ${star}
-                </div>
-                <span>${listProduct[i].price}</span>
-              </div>
-            </div>
-          </div>`;
-        arrElProduct += el;
-      }
-      containerProduct.innerHTML = arrElProduct;
-    </script>
+    <!-- SCRIPT -->
+    <script defer src="./js/index.js"></script>
   </body>
 </html>
