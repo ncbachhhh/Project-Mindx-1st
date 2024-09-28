@@ -34,14 +34,13 @@ header {
     font-size: 16px;
     display: inline-block;
     line-height: 1;
-    -moz-user-select: none;
     letter-spacing: 1px;
     line-height: 0;
     margin-bottom: 0;
     cursor: pointer;
     transition: color 0.4s linear;
     position: relative;
-    z-index: 1;
+    z-index: 100;
     border: 0;
     overflow: hidden;
     margin: 0;
@@ -116,7 +115,7 @@ header > div {
 .header_social > a > i {
     color: #1D2547;
 }
-.header_search, .header_user{
+.header_search, .header_user {
     padding: 0 13px;
     height: 40px;
     text-align: center;
@@ -145,6 +144,18 @@ header > div {
     color: white;
     transform: translateY(10%);
 }
+.logout_btn {
+    padding: 0 13px;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(235, 229, 243);
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+}
+.logout_btn > i {
+    transform: translateY(50%);
+}
 /* =============================END HEADER============================== */
 /* =============================SIDEBAR START============================== */
 .sidebar-icon {
@@ -161,7 +172,16 @@ header > div {
 }
 /* =============================SIDEBAR START============================== */
 /* =============================CART START============================== */
-
+.shopping-cart {
+    position: sticky;
+    left: 100%;
+    top: 6.2em;
+    z-index: 1000;
+    background-color: rgb(223, 222, 221);
+}
+.cart-product > img {
+    height: 10%;
+}
 /* =============================CART END============================== */
 /* =============================CAROUSEL START============================== */
 .carousel-caption > div {

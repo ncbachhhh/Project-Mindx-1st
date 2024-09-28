@@ -85,6 +85,8 @@ for (let i = 0; i < listProduct.length; i++) {
 }
 containerProduct.innerHTML = arrElProduct;
 
+// ============================================================================================================
+
 // SIDEBAR FUNCTION
 const elSidebarButton = document.getElementById("sidebar-icon");
 const elSidebarMenu = document.getElementById("sidebar-menu");
@@ -93,16 +95,31 @@ elSidebarButton.addEventListener("click", openMenuSideBar);
 
 function openMenuSideBar() {
     if (elSidebarMenu.style.display == "none") {
-        elSidebarMenu.style.display = "block";
+        elSidebarMenu.style.display = "block";    
     }
     else {
         elSidebarMenu.style.display = 'none';
     }
 }
+// ============================================================================================================
 
 // Check Login 
 const elPCheck = document.getElementById("login_check");
-const checkUserLogin =  JSON.parse(localStorage.getItem('checkLogin'));
+const elLogoutBtn = document.getElementById("logout_btn");
+let checkUserLogin =  JSON.parse(localStorage.getItem('checkLogin'));
 if (checkUserLogin == true) {
   elPCheck.textContent = localStorage.getItem('userNickname');
+  elLogoutBtn.style.display = 'block';
+}
+
+// ============================================================================================================
+
+// Logout Button
+elLogoutBtn.addEventListener('click',logOutBtn);
+
+function logOutBtn() {
+  checkUserLogin = false;
+  localStorage.setItem('checkLogin',JSON.stringify(checkUserLogin));
+  elPCheck.textContent = localStorage.setItem('userNickname','');
+  elLogoutBtn.style.display = 'none';
 }

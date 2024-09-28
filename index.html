@@ -92,11 +92,16 @@
                 </div>
               </li>
               <li>
-                <div class="header_user d-flex justify-content-center align-items-center gap-2">
+                <div class="header_user d-flex justify-content-center align-items-center">
                   <a href="signup.html" class="">
                     <i class="fa-solid fa-user"></i>
                   </a>
-                  <p id="login_check"></p>
+                  <p id="login_check" class="pl-2"></p>
+                </div>
+              </li>
+              <li>
+                <div class="logout_btn" id="logout_btn">
+                  <i class="fa-solid fa-right-from-bracket"></i>
                 </div>
               </li>
             </ul>
@@ -133,8 +138,25 @@
         </li>
       </ul>
     </div>
-    <div class="shopping-cart">
-
+    <div class="shopping-cart w-25">
+      <div class="cart-top d-flex justify-content-between p-4">
+        <p>Giỏ hàng của tôi</p>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="cart-bottom d-flex flex-column p-4 gap-3">
+        <div class="cart-product d-flex">
+          <img src="./imgs/gallery/arrival1.png" alt="">
+          <div class="">
+            <p>ten san pham</p>
+            <div>
+              <span>SL:</span>
+              <span>1</span>
+              <p>$ 30.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="m-0">
     </div>
     <main>
       <!-- ========================================== Carousel Start ========================================== -->
