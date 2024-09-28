@@ -128,7 +128,6 @@ header > div {
     transform: translateY(55%);
 }
 .header_user > a > i {
-    transform: translateY(-20%);
     color: black;
 }
 .header_store {

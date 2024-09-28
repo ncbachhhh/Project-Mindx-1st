@@ -6,13 +6,14 @@ let addUser = {
   email: "",
   password: "",
 };
-
+let userNickname = '';
 const listUser = localStorage.getItem(KEY_USERS) ? JSON.parse(localStorage.getItem(KEY_USERS)) : [];
 
 const elUserName_login = document.getElementById("username_login");
 const elPassword_login = document.getElementById("password_login");
 const btnLogin = document.getElementById("btnLogin");
 
+let checkLogin = false;
 // click login, register
 btnLogin.addEventListener("click", onClickLogin);
 
@@ -26,6 +27,10 @@ function onClickLogin(event) {
     // success login
     if (!!user && user.password == elPassword_login.value) {
       alert("Dang nhap thanh cong");
+      checkLogin = !checkLogin;
+      localStorage.setItem('checkLogin', JSON.stringify(checkLogin));
+      userNickname = user.username;
+      localStorage.setItem('userNickname', userNickname);
     }
     // fail login
     else {

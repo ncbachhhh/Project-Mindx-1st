@@ -1,3 +1,4 @@
+// addProduct
 let containerProduct = document.getElementById("wrapperProduct");
 const listProduct = [
   {
@@ -97,4 +98,11 @@ function openMenuSideBar() {
     else {
         elSidebarMenu.style.display = 'none';
     }
+}
+
+// Check Login 
+const elPCheck = document.getElementById("login_check");
+const checkUserLogin =  JSON.parse(localStorage.getItem('checkLogin'));
+if (checkUserLogin == true) {
+  elPCheck.textContent = localStorage.getItem('userNickname');
 }
