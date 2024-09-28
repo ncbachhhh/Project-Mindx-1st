@@ -123,3 +123,7 @@ function logOutBtn() {
   elPCheck.textContent = localStorage.setItem('userNickname','');
   elLogoutBtn.style.display = 'none';
 }
+
+// ============================================================================================================
+
+// Shopping cart
