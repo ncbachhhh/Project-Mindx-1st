@@ -86,17 +86,17 @@
                 </div>
               </li>
               <li>
-                <div class="header_store">
+                <div class="header_store" id="header_store">
                   <img src="./imgs/gallery/card.svg" alt="" />
-                  <span>0</span>
                 </div>
               </li>
               <li>
-                <div class="header_user d-flex justify-content-center align-items-center">
-                  <a href="signup.html" class="">
+                <div class="d-flex justify-content-center align-items-center">
+                  <a href="signup.html" class="header_user">
                     <i class="fa-solid fa-user"></i>
+                    <span class="pl-2 username_login" id="login_check"></span>
                   </a>
-                  <p id="login_check" class="pl-2"></p>
+                  
                 </div>
               </li>
               <li>
@@ -138,25 +138,20 @@
         </li>
       </ul>
     </div>
-    <div class="shopping-cart w-25">
+    <div class="shopping-cart w-25 cart-wrapper" id="shopping-cart">
       <div class="cart-top d-flex justify-content-between p-4">
         <p>Giỏ hàng của tôi</p>
-        <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-xmark" id="btnCardClose"></i>
       </div>
-      <hr class="m-0" style="border: 1px solid black;">
+      <hr class="m-0" style="border: 1px solid black" />
       <div class="cart-bottom d-flex flex-column p-4 gap-3">
-        <div class="cart-product d-flex justify-content-between align-items-center">
-          <img src="./imgs/gallery/arrival1.png" alt="">
-          <div class="d-flex flex-column gap-2">
-            <p>ten san pham</p>
-            <div>
-              <p>$ 30.00</p>
-            </div>
-          </div>
-          <i class="fa-regular fa-circle-xmark"></i>
-        </div>
+        <!-- CART ITEM -->
       </div>
-
+      <hr class="m-0" style="border: 1px solid black" />
+      <div class="totalPrice h-10 pr-3 pt-3 pl-3 d-flex align-items-start justify-content-between">
+        <p>Total: <span class="nav__mount">0</span></p>
+        <button class="btnPurchase">PURCHASE</button>
+      </div>
     </div>
     <main>
       <!-- ========================================== Carousel Start ========================================== -->

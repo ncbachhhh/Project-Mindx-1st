@@ -22,7 +22,8 @@ header {
     position: fixed;
     z-index: 1000;
     background-color: white;
-    padding: 30px 40px;
+    height: 12vh;
+    padding: 0 40px;
 }
 .first_button_form {
     background: #9F78FF;
@@ -105,17 +106,21 @@ header > div {
 }
 /* RIGHT HEADER */
 .header_social > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid rgb(27, 24, 24);
     padding: 10px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     text-align: center;
+    
 }
 .header_social > a > i {
     color: #1D2547;
 }
-.header_search, .header_user {
+.header_search {
     padding: 0 13px;
     height: 40px;
     text-align: center;
@@ -125,9 +130,6 @@ header > div {
 }
 .header_search > i {
     transform: translateY(55%);
-}
-.header_user > a > i {
-    color: black;
 }
 .header_store {
     background-color: #9F78FF;
@@ -156,6 +158,23 @@ header > div {
 .logout_btn > i {
     transform: translateY(50%);
 }
+.header_user {
+    height: 40px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 229, 243);
+    border-radius: 20px;
+    padding: 13px;
+}
+.header_user:hover {
+    color: black;
+    text-decoration: none;
+}
+.username_login {
+    display: none;
+}
 /* =============================END HEADER============================== */
 /* =============================SIDEBAR START============================== */
 .sidebar-icon {
@@ -173,14 +192,26 @@ header > div {
 /* =============================SIDEBAR START============================== */
 /* =============================CART START============================== */
 .shopping-cart {
-    position: sticky;
-    left: 100%;
-    top: 6.2em;
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 12vh;
     z-index: 1000;
     background-color: rgb(223, 222, 221);
 }
+.cart-bottom {
+    height: 70vh;
+    overflow-y: scroll;
+}
 .cart-product > img {
     height: 130px;
+}
+.totalPrice {
+    height: 100px;
+}
+.btnPurchase {
+    padding: 3px;
+    background-color: #f4f5f9;
 }
 /* =============================CART END============================== */
 /* =============================CAROUSEL START============================== */
