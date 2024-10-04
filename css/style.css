@@ -203,7 +203,12 @@ header > div {
     height: 70vh;
     overflow-y: scroll;
 }
-.cart-product > img {
+.cart-product > div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.cart-product > div > img {
     height: 130px;
 }
 .totalPrice {
@@ -440,6 +445,9 @@ header > div {
         font-weight: 500;
         font-size: 12px;
     }
+    .shopping-cart {
+        width: 40% !important;
+    }
     .carousel-caption > div > p {
         font-size: 40px;
         font-weight: 700;
@@ -493,6 +501,10 @@ header > div {
         left: 2.5em;
         top: 4.25em;
         border-radius: 10px;
+    }
+    .cart-product > div > img {
+        height: 100px;
+        padding-right: 10px;
     }
     .carousel-caption > div {
         display: none;

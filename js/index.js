@@ -124,6 +124,7 @@ function logOutBtn() {
   checkUserLogin = false;
   localStorage.setItem("checkLogin", JSON.stringify(checkUserLogin));
   elPCheck.textContent = localStorage.setItem("userNickname", "");
+  elPCheck.style.display = "none";
   elLogoutBtn.style.display = "none";
 }
 
@@ -162,14 +163,18 @@ btnBuy.forEach(function (button, index) {
   });
 });
 
+// ============================================================================================================
+
 function formatMoney(value) {
   return value.split(" ")[1].split(".")[0];
 }
 
+// ============================================================================================================
+
 // FUNCTION ADDCART
 function addCart(productImg, productName, productPrice) {
   let cartShopping = document.createElement("div");
-  cartShopping.classList = "cart-product d-flex justify-content-between align-items-start";
+  cartShopping.classList = "cart-product d-flex justify-content-between";
   let cartItem = document.querySelectorAll(".cart-product");
   for (let i = 0; i < cartItem.length; i++) {
     let productItem = document.querySelectorAll(".cart-product");
@@ -179,6 +184,7 @@ function addCart(productImg, productName, productPrice) {
     }
   }
   let cardContent = ` 
+    <div>
       <img src="${productImg}" alt="" />
       <div class="d-flex flex-column gap-2">
         <p class="card-Name">${productName}</p>
@@ -187,36 +193,57 @@ function addCart(productImg, productName, productPrice) {
         </div>
       </div>
       <i class="fa-regular fa-circle-xmark deleteProduct"></i>
+    </div>
       `;
   cartShopping.innerHTML = cardContent;
   let cartBody = document.querySelector(".cart-bottom");
   cartBody.append(cartShopping);
 }
 
+// ============================================================================================================
+
 // FUNCTION DELETE CART
 function deleteCart() {
   let cartItem = document.querySelectorAll(".cart-product");
-  console.log(cartItem);
-  
   for (let i = 0; i < cartItem.length; i++) {
     let cart__Close = document.querySelectorAll(".deleteProduct");
     cart__Close[i].addEventListener("click", function (event) {
       let cartDelete = event.target;
       let cartCloseDelete = cartDelete.parentElement.parentElement;
       cartCloseDelete.remove();
+      calcTotal();
     });
   }
 }
+
+// ============================================================================================================
 
 // FUNCTION CALC TOTAL
 function calcTotal() {
   let cartItem = document.querySelectorAll(".cart-product");
   let totalCash = 0;
   for (let i = 0; i < cartItem.length; i++) {
-    let inputChangeValue = parseInt(formatMoney(cartItem[i].querySelector(".product_price").textContent));
+    let inputChangeValue = parseInt(
+      formatMoney(cartItem[i].querySelector(".product_price").textContent)
+    );
     totalCash = totalCash + inputChangeValue;
-
   }
   let totalDisplay = document.querySelector(".nav__mount");
-  totalDisplay.textContent = totalCash;
+  totalDisplay.textContent = `$ ${totalCash}.00`;
+}
+
+// ============================================================================================================
+
+// FUNCTION PURCHASE
+const purBtn = document.getElementById("btnPurchase");
+
+purBtn.addEventListener("click", purBtnClick);
+
+function purBtnClick() {
+  let cartItem = document.querySelectorAll(".cart-product");
+  let totalDisplay = document.querySelector(".nav__mount");
+  for (let i = 0; i < cartItem.length; i++) {
+    cartItem[i].remove();
+  }
+  totalDisplay.textContent = `$ 0.00`;
 }
