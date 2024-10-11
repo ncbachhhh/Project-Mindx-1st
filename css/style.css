@@ -110,15 +110,25 @@ header > div {
     justify-content: center;
     align-items: center;
     border: 1px solid rgb(27, 24, 24);
-    padding: 10px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     text-align: center;
+    text-decoration: none;
     
 }
 .header_social > a > i {
     color: #1D2547;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.header_social > a > i:hover {
+    color: white;
+    background-color: rgb(32, 37, 82);
 }
 .header_search {
     padding: 0 13px;
@@ -262,6 +272,8 @@ header > div {
 }
 .store-btn {
     cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50%;
 }
 /* =============================POPULAR END============================== */
 /* =============================NEW ARRIVALS START============================== */
@@ -444,6 +456,9 @@ header > div {
         padding: 20;
         font-weight: 500;
         font-size: 12px;
+    }
+    main {
+        padding-top: 90px;
     }
     .shopping-cart {
         width: 40% !important;
