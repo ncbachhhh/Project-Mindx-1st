@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+p {
+    margin: 0;
+}
+body {
+    padding: 50px 40px 10px 40px;
+    flex-direction: column;
+    align-items: center;
+}
+.first_button_form {
+    background: #9F78FF;
+    text-transform: capitalize;
+    padding: 27px 25px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 1;
+    -moz-user-select: none;
+    letter-spacing: 1px;
+    line-height: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    z-index: 1;
+    border: 0;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 4px;
+}
+.first_button_form:hover {
+    color: white;
+    text-decoration: underline;
+}
+.first_button_form:hover::before {
+    transform: scaleX(1);
+    border: 1px solid transparent;
+    color: #fff;
+}
+.first_button_form::before {
+    content: "";
+    border: 1px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #8c6ae4;
+    z-index: -1;
+    border-radius: 5px;
+    transition: transform 0.5s;
+    transition-timing-function: ease;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+    border-radius: 0px;
+}
+.checked {
+    color: orange;
+}
+/* ===============================HEADER============================== */
+/* header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+} */
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* LEFT HEADER */
+.header_menu > nav > ul  {
+    display: flex;
+    align-items: center;
+}
+.header_menu > nav > ul > li {
+    font-weight: 600;
+}
+.header_menu > nav > ul > li > a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.header_menu > nav > ul > li > a > p {
+    color: black;
+}
+/* RIGHT HEADER */
+.header_social > a {
+    border: 1px solid rgb(27, 24, 24);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+.header_social > a > i {
+    color: #1D2547;
+}
+.header_search, .header_user{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(235, 229, 243);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header_search > i {
+    transform: translateY(55%);
+}
+.header_user > a > i {
+    transform: translateY(55%);
+    color: black;
+}
+.header_store {
+    background-color: #9F78FF;
+    height: 40px;
+    padding: 10px 25px 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.header_store > span {
+    color: white;
+    transform: translateY(10%);
+}
+/* =============================END HEADER============================== */
+/*============================Main================*/
+.container_Blog{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 300px;
+    gap: 50px;
+}
+.container_Blog_one{
+    width: 750px;
+    height: 700px;
+    border: 1px solid #ccc;
+}
+.container_Blog_one > div > a {
+    padding: 20px;
+}
+.container_Blog--p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: #dbd0f8;
+    top: -70px;
+    left: 50px;
+    border-radius: 5px;
+}
+.container_Blog_one--search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #b0a8c52a;
+    gap: 20px;
+    width: 400px;
+    height: 150px;
+}
+.container_Blog_one--category{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 400px;
+    background-color: #c3bfce1f;
+    left: 1140px;
+    top: 450px;
+    padding: 50px;
+    gap: 35px;
+}
+.container_Blog_two {
+    padding: 50px;
+    margin-left: 250px;
+    display: flex;
+    gap: 30px;
+}
+.container_Blog_two--Ren {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    background-color: #c3bfce1f ;
+    padding: 50px;
+    gap: 35px;
+}
+.container_Blog_two--Ren--post {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.container_Blog_thr {
+    display: flex;
+    margin-left: 250px;
+    padding-left: 50px;
+    gap: 35px;
+}
+.container_Blog_thr--tag {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 150px;
+    
+}
+.container_Blog_thr--feeds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: absolute;
+    padding: 20px;
+    gap: 20px;
+    left: 1140px;
+    top: 1900px;
+}
+.container_Blog_four {
+    padding-top: 50px;
+    margin-left: 300px;
+
+}
+
+.container_Blog_five {
+    padding-top: 50px;
+}
+
+/* =============================START FOOTER============================== */
+.service-container {
+    padding: 140px 20px 130px 20px;
+    background-color: #f4f5f9;
+}
+
+.footer-container {
+    background-color: #1D2547;
+}
+
+.social-icon > a{
+    border: 1px solid white;
+}
+.quick-links > h3 {
+    font-size: 20px;
+}
+.quick-links > ul {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
+}
+.quick-links > ul > li {
+    padding-top: 0.5em;
+}
+.quick-links > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+}
+/* =============================END FOOTER============================== */
+@media screen and (max-width:768px){
+    .header_logo {
+        display: none;
+    }
+    .header_social {
+        display: none !important;
+    }
+    .first_button_form {
+        padding: 20;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .shionhouse-footer {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .header_menu > nav > ul {
+        gap: 8px !important;
+    }
+    .header_user_find_store > ul {
+        gap: 5px !important;
+    }
+    .first_button_form {
+        padding: 15px 10px;
+        font-size: 16px;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+}

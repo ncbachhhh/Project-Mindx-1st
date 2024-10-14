@@ -1,32 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shion House</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Font -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" />
-    <!-- Bootstrap CSS v5.2.1 -->
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/blog.css" />
   </head>
-
-  <body class="d-flex">
+  <body>
     <header class="w-100 d-flex justify-content-center align-items-center">
       <!-- place navbar here -->
-      <div class="sidebar-container">
-        <div class="sidebar-icon" id="sidebar-icon">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </div>
       <div class="w-100 d-flex justify-content-between align-items-center">
         <div class="left_header_container d-flex justify-content-center align-items-center gap-4">
           <div class="header_logo">
@@ -86,22 +70,16 @@
                 </div>
               </li>
               <li>
-                <div class="header_store" id="header_store">
+                <div class="header_store">
                   <img src="./imgs/gallery/card.svg" alt="" />
+                  <span>0</span>
                 </div>
               </li>
               <li>
-                <div class="d-flex justify-content-center align-items-center">
-                  <a href="signup.html" class="header_user">
-                    <i class="fa-solid fa-user"></i>
-                    <span class="pl-2 username_login" id="login_check"></span>
+                <div class="header_user">
+                  <a href="login.html">
+                    <i class="fa-solid fa-user"> </i>
                   </a>
-                  
-                </div>
-              </li>
-              <li>
-                <div class="logout_btn" id="logout_btn">
-                  <i class="fa-solid fa-right-from-bracket"></i>
                 </div>
               </li>
             </ul>
@@ -109,53 +87,123 @@
         </div>
       </div>
     </header>
-    <div class="sidebar-menu" id="sidebar-menu">
-      <ul class="d-flex flex-column justify-content-center align-items-start gap-4">
-        <li>
-          <a href="index.html">
-            <p>HOME</p>
-          </a>
-        </li>
-        <li>
-          <a href="shop.html">
-            <p>SHOP</p>
-          </a>
-        </li>
-        <li>
-          <a href="about.html">
-            <p>ABOUT</p>
-          </a>
-        </li>
-        <li>
-          <a href="blog.html">
-            <p>BLOG</p>
-          </a>
-        </li>
-        <li>
-          <a href="contact.html">
-            <p>CONTACT</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-      <!-- ========================================== Cart Start ========================================== -->
-    <div class="shopping-cart w-25 cart-wrapper" id="shopping-cart">
-      <div class="cart-top d-flex justify-content-between p-4">
-        <p>Giỏ hàng của tôi</p>
-        <i class="fa-solid fa-xmark" id="btnCardClose"></i>
-      </div>
-      <hr class="m-0" style="border: 1px solid black" />
-      <div class="cart-bottom d-flex flex-column p-4 gap-3">
-        <!-- CART ITEM -->
-      </div>
-      <hr class="m-0" style="border: 1px solid black" />
-      <div class="totalPrice h-10 pr-3 pt-3 pl-3 d-flex align-items-start justify-content-between">
-        <p>Total: <span class="nav__mount">$ 0.00</span></p>
-        <button class="btnPurchase" id="btnPurchase">PURCHASE</button>
-      </div>
-    </div>
-          <!-- ========================================== Cart End ========================================== -->
     <main>
+      <!-- ====================MAIN HERE======================= -->
+       <div class="bg-secondary d-flex justify-content-center align-items-center " style="height: 50px;">Home > Blog</div>
+       <div class="container_Blog">
+          <div class="container_Blog_one">
+            <img src="imgs/blog/single_blog_1.png" alt="img-blog1">
+            <p class="container_Blog--p">15 Jan</p> 
+            <div><a href="">GOOGLE INKS PACT FOR NEW 35-STOREY OFFICE</a></div>
+            <div><p style="padding: 20px;">That dominion stars lights dominion divide years for fourth have don't start is that he earth it first
+              without heaven in place seed it morning saying.</p>
+            </div>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="container_Blog_one--search">
+            <input type="text">
+            <a href="" class="first_button_form">search</a>
+          </div>
+          <div class="container_Blog_one--category">
+            <h3>Category</h3>
+            <a href="">Resaurant food (37)</a>
+            <a href="">Travel news (10)</a>
+            <a href="">Modern technology (03)</a>
+            <a href="">Product (11)</a>
+            <a href="">Inspiration 21</a>
+            <a href="">Health Care (21) 09</a>
+          </div>
+       </div>
+       <div class="container_Blog_two">
+          <div class="container_Blog_one">
+            <img src="imgs/blog/single_blog_2.png" alt="img-blog2">
+            <p class="container_Blog--p">15 Jan</p>
+            <div><a href="">Google inks pact for new 35-storey office</a></div>
+            <div><p style="padding: 20px;">That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first 
+              without heaven in place seed it second morning saying.</p></div>
+          </div>
+          <div></div>
+          <div class="container_Blog_two--Ren">
+            <h3>Recent Post</h3>
+            <div class="container_Blog_two--Ren--post">
+              <img src="imgs/blog/post_1.png" alt="post_1">
+              <div><a href="">From life was you fish...</a>
+              <p>January 12, 2019</p></div>
+            </div>
+            <div class="container_Blog_two--Ren--post">
+              <img src="imgs/blog/post_2.png" alt="post_2">
+              <div><a href="">The Amazing Hubble</a>
+              <p>02 Hours ago</p>
+              </div>
+            </div>
+            <div class="container_Blog_two--Ren--post">
+              <img src="imgs/blog/post_3.png" alt="post_3">
+              <div><a href="">Astronomy Or Astrology</a>
+              <p>03 Hours ago</p></div>
+            </div>
+            <div class="container_Blog_two--Ren--post">
+              <img src="imgs/blog/post_4.png" alt="post_4">
+              <div><a href="">Asteroids telescope</a>
+              <p>01 Hours ago</p></div>
+            </div>
+
+          </div>
+        </div>
+      <div>
+       <div class="container_Blog_thr">
+         <div class="container_Blog_one">
+           <img src="imgs/blog/single_blog_3.png" alt="img-blog3">
+           <p class="container_Blog--p">15 Jan</p>
+           <div><a href="">Google inks pact for new 35-storey office</a></div>
+           <div><p style="padding: 20px;">That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first 
+             without heaven in place seed it second morning saying.</p></div>
+            </div>
+            <div></div>
+            <div class="container_Blog_thr--tag">
+              <h3>TAG CLOUDS</h3>
+              <div>
+                <button type="button" class="btn btn-outline-secondary btn-sm">project</button>        
+                <button type="button" class="btn btn-outline-secondary btn-sm">love</button>        
+                <button type="button" class="btn btn-outline-secondary btn-sm">technology</button>        
+                <button type="button" class="btn btn-outline-secondary btn-sm">travel</button>        
+                <button type="button" class="btn btn-outline-secondary btn-sm">restaurant</button>        
+                <button type="button" class="btn btn-outline-secondary btn-sm">life style</button>        
+                <button type="button" class="btn btn-outline-secondary btn-sm">design</button>        
+                <button type="button" class="btn btn-outline-secondary btn-sm">illustration</button>        
+              </div>
+            </div>
+            <div class="container_Blog_thr--feeds">
+              <img src="imgs/blog/post_5.png" alt="post_5">
+              <img src="imgs/blog/post_6.png" alt="post_6">
+              <img src="imgs/blog/post_7.png" alt="post_7">
+              <img src="imgs/blog/post_8.png" alt="post_8">
+              <img src="imgs/blog/post_9.png" alt="post_9">
+              <img src="imgs/blog/post_10.png" alt="post_10">
+            </div>
+          </div>  
+      <div class="container_Blog_four">
+          <div class="container_Blog_one">
+            <img src="imgs/blog/single_blog_4.png" alt="img-blog4">
+            <p class="container_Blog--p">15 Jan</p>
+            <div><a href="">Google inks pact for new 35-storey office</a></div>
+            <div><p style="padding: 20px;">That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first 
+              without heaven in place seed it second morning saying.</p></div>
+           <div></div>
+           <div></div>
+        </div>
+      <div class="container_Blog_five">
+          <div class="container_Blog_one">
+            <img src="imgs/blog/single_blog_5.png" alt="img-blog5">
+            <p class="container_Blog--p">15 Jan</p>
+            <div><a href="">Google inks pact for new 35-storey office</a></div>
+            <div><p style="padding: 20px;">That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first 
+              without heaven in place seed it second morning saying.</p></div>
+        </div>
+
+       </div>
     </main>
     <footer class="w-100">
       <!-- place footer here -->
@@ -163,7 +211,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 pl-15 pr-15">
-              <div class="single-cat mb-5">
+              <div class="single-cat mb-5 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeInUp">
                 <div class="cat-icon mb-4">
                   <img src="./imgs/icon/services1.svg" alt="" />
                 </div>
@@ -174,7 +222,7 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 pl-15 pr-15">
-              <div class="single-cat mb-5">
+              <div class="single-cat mb-5 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeInUp">
                 <div class="cat-icon mb-4">
                   <img src="./imgs/icon/services2.svg" alt="" />
                 </div>
@@ -185,7 +233,7 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 pl-15 pr-15">
-              <div class="single-cat mb-30">
+              <div class="single-cat mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeInUp">
                 <div class="cat-icon mb-4">
                   <img src="./imgs/icon/services3.svg" alt="" />
                 </div>
@@ -196,7 +244,7 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 pl-15 pr-15">
-              <div class="single-cat">
+              <div class="single-cat wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInUp">
                 <div class="cat-icon mb-4">
                   <img src="./imgs/icon/services4.svg" alt="" />
                 </div>
@@ -290,10 +338,6 @@
         </div>
       </div>
     </footer>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- SCRIPT -->
-    <script defer src="./js/blog.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
