@@ -41,8 +41,4 @@ function onClickLogin(event) {
   return;
 }
 
-function consolelogDebug() {
-  console.log(window);
-}
 
-consolelogDebug();

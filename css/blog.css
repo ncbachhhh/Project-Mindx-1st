@@ -259,7 +259,108 @@ header > div {
     text-decoration: none;
     font-weight: 100;
 }
+/*============================Main================*/
+.container_Blog{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 300px;
+    gap: 50px;
+}
+.container_Blog_one{
+    width: 750px;
+    height: 700px;
+    border: 1px solid #ccc;
+}
+.container_Blog_one > div > a {
+    padding: 20px;
+}
+.container_Blog--p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: #dbd0f8;
+    top: -70px;
+    left: 50px;
+    border-radius: 5px;
+}
+.container_Blog_one--search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #b0a8c52a;
+    gap: 20px;
+    width: 400px;
+    height: 150px;
+}
+.container_Blog_one--category{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 400px;
+    background-color: #c3bfce1f;
+    left: 1140px;
+    top: 450px;
+    padding: 50px;
+    gap: 35px;
+}
+.container_Blog_two {
+    padding: 50px;
+    margin-left: 250px;
+    display: flex;
+    gap: 30px;
+}
+.container_Blog_two--Ren {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    background-color: #c3bfce1f ;
+    padding: 50px;
+    gap: 35px;
+}
+.container_Blog_two--Ren--post {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.container_Blog_thr {
+    display: flex;
+    margin-left: 250px;
+    padding-left: 50px;
+    gap: 35px;
+}
+.container_Blog_thr--tag {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 150px;
+    
+}
+.container_Blog_thr--feeds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: absolute;
+    padding: 20px;
+    gap: 20px;
+    left: 1140px;
+    top: 1900px;
+}
+.container_Blog_four {
+    padding-top: 50px;
+    margin-left: 300px;
 
+}
+
+.container_Blog_five {
+    padding-top: 50px;
+}
 @media screen and (max-width:768px){
     .header_logo {
         display: none;

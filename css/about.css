@@ -13,6 +13,9 @@ ul {
 p {
     margin: 0;
 }
+main {
+    padding-top: 12vh;
+}
 body {
     padding: 0px 40px 10px 40px;
     flex-direction: column;
@@ -101,8 +104,17 @@ header > div {
     cursor: pointer;
     text-decoration: none;
 }
+.header_menu > nav > ul > li > a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: black;
+    text-decoration-color: #9F78FF;
+}
 .header_menu > nav > ul > li > a > p {
     color: black;
+}
+.header_menu > nav > ul > li > a > p:hover {
+    color: #9F78FF;
 }
 /* RIGHT HEADER */
 .header_social > a {
@@ -191,7 +203,7 @@ header > div {
     text-align: center;
 }
 .sidebar-container {
-    background-color: darkslateblue;
+    background-color: #9F78FF;
     padding: 10px 15px;
     border-radius: 8px;
     display: none;
@@ -207,7 +219,11 @@ header > div {
     right: 0;
     top: 12vh;
     z-index: 1000;
-    background-color: rgb(223, 222, 221);
+    background-color: rgb(255, 255, 255);
+}
+.cart-top > p{
+    font-size: 20px;
+    font-weight: 450;
 }
 .cart-bottom {
     height: 70vh;
@@ -221,12 +237,16 @@ header > div {
 .cart-product > div > img {
     height: 130px;
 }
-.totalPrice {
-    height: 100px;
+.totalPrice > p {
+    padding: 10px 0 0 0 ;
+    font-size: 25px;
 }
 .btnPurchase {
-    padding: 3px;
-    background-color: #f4f5f9;
+    padding: 10px;
+    background-color: #9F78FF;
+    color: white;
+    border-radius: 10px;
+    border: none;
 }
 /* =============================CART END============================== */
 
@@ -260,6 +280,42 @@ header > div {
     font-weight: 100;
 }
 
+.section_title {
+    font-family: Kaushan;
+    font-size: 70px;
+    font-weight: 800;
+    color: #1D2547;
+}
+/* =============================POPULAR START============================== */
+.popular-img {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-cap {
+    font-family: Kaushan;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background-color: rgb(34, 34, 34, 0.5);
+}
+.btn {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 45%;
+}
+.store-btn {
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+/* =============================POPULAR END============================== */
 @media screen and (max-width:768px){
     .header_logo {
         display: none;
@@ -273,7 +329,7 @@ header > div {
         font-size: 12px;
     }
     main {
-        padding-top: 90px;
+        padding-top: 110px;
     }
     .shopping-cart {
         width: 40% !important;
@@ -300,7 +356,7 @@ header > div {
         display: block;
     }
     .sidebar-menu {
-        background-color: darkslateblue;
+        background-color: #9F78FF;
         padding: 10px 15px;
         position: fixed;
         z-index: 1000;
@@ -308,6 +364,11 @@ header > div {
         left: 2.5em;
         top: 4.25em;
         border-radius: 10px;
+    }
+    .sidebar-menu > ul > li > a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
     }
     .first_button_form {
         padding: 15px 10px;

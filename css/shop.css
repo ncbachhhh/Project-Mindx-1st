@@ -97,12 +97,22 @@ header > div {
 .header_menu > nav > ul > li {
     font-weight: 600;
 }
+
 .header_menu > nav > ul > li > a {
     cursor: pointer;
     text-decoration: none;
 }
+.header_menu > nav > ul > li > a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: black;
+    text-decoration-color: #9F78FF;
+}
 .header_menu > nav > ul > li > a > p {
     color: black;
+}
+.header_menu > nav > ul > li > a > p:hover {
+    color: #9F78FF;
 }
 /* RIGHT HEADER */
 .header_social > a {
@@ -186,12 +196,56 @@ header > div {
     display: none;
 }
 /* =============================END HEADER============================== */
+/* MAIN */
+main {
+    padding-top: 12vh;
+}
+.shop_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:50px;
+}
+.section-tittle > h2 {
+    font-family: Kaushan;
+    font-weight: 700;
+    font-size: 80px;
+    color: #1D2547;
+}
+.category-listing > div {
+    padding: 5px 30px 5px 5px;
+    border: 1px solid gray;
+}
+.checked {
+    color: orange;
+}
+.linkImg {
+    height: 230px;
+}
+.new-arrivals-product {
+    border: 1px solid black;
+    position: relative;
+}
+.favorit-items {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid  grey;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.room-btn {
+    display: flex;
+    padding: 20px 0 20px 0;
+    justify-content: center;
+
+}
 /* =============================SIDEBAR START============================== */
 .sidebar-icon {
     text-align: center;
 }
 .sidebar-container {
-    background-color: darkslateblue;
+    background-color: #9F78FF;
     padding: 10px 15px;
     border-radius: 8px;
     display: none;
@@ -207,7 +261,11 @@ header > div {
     right: 0;
     top: 12vh;
     z-index: 1000;
-    background-color: rgb(223, 222, 221);
+    background-color: rgb(255, 255, 255);
+}
+.cart-top > p{
+    font-size: 20px;
+    font-weight: 450;
 }
 .cart-bottom {
     height: 70vh;
@@ -221,12 +279,16 @@ header > div {
 .cart-product > div > img {
     height: 130px;
 }
-.totalPrice {
-    height: 100px;
+.totalPrice > p {
+    padding: 10px 0 0 0 ;
+    font-size: 25px;
 }
 .btnPurchase {
-    padding: 3px;
-    background-color: #f4f5f9;
+    padding: 10px;
+    background-color: #9F78FF;
+    color: white;
+    border-radius: 10px;
+    border: none;
 }
 /* =============================CART END============================== */
 
@@ -281,6 +343,9 @@ header > div {
     .shionhouse-footer {
         display: none !important;
     }
+    .linkImg {
+        height: 150px;
+    }
 }
 @media screen and (max-width: 576px) {
     
@@ -300,7 +365,7 @@ header > div {
         display: block;
     }
     .sidebar-menu {
-        background-color: darkslateblue;
+        background-color: #9F78FF;
         padding: 10px 15px;
         position: fixed;
         z-index: 1000;
@@ -309,6 +374,11 @@ header > div {
         top: 4.25em;
         border-radius: 10px;
     }
+    .sidebar-menu > ul > li > a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
     .first_button_form {
         padding: 15px 10px;
         font-size: 16px;
@@ -316,6 +386,9 @@ header > div {
 
     .footer-container {
         flex-direction: column;
+    }
+    .new-arrivals-store {
+        justify-content: center;
     }
 }
 

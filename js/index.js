@@ -173,31 +173,43 @@ function formatMoney(value) {
 
 // FUNCTION ADDCART
 function addCart(productImg, productName, productPrice) {
-  let cartShopping = document.createElement("div");
-  cartShopping.classList = "cart-product d-flex justify-content-between";
-  let cartItem = document.querySelectorAll(".cart-product");
-  for (let i = 0; i < cartItem.length; i++) {
-    let productItem = document.querySelectorAll(".cart-product");
-    if (productItem[i].innerHTML == productName) {
-      alert("Sản phẩm đã có trong giỏ");
-      return;
+  let loginCheckCart = JSON.parse(localStorage.getItem("checkLogin"));
+  console.log(loginCheckCart);
+  if (loginCheckCart == false) {
+    alert("Vui lòng đăng nhập");
+    setTimeout(() => {
+      window.open("./login.html");
+    }, 1500);
+  } else {
+    let cartShopping = document.createElement("div");
+    cartShopping.classList = "cart-product d-flex justify-content-between flex-column";
+    let cartItem = document.querySelectorAll(".cart-product");
+    for (let i = 0; i < cartItem.length; i++) {
+      let productItem = document.querySelectorAll(".cart-product");
+      if (productItem[i].innerHTML == productName) {
+        alert("Sản phẩm đã có trong giỏ");
+        return;
+      }
     }
-  }
-  let cardContent = ` 
-    <div>
+    let cardContent = ` 
+    <div class="align-items-center">
       <img src="${productImg}" alt="" />
       <div class="d-flex flex-column gap-2">
         <p class="card-Name">${productName}</p>
         <div>
           <p class="product_price">$ ${productPrice}.00</p>
         </div>
+        
       </div>
       <i class="fa-regular fa-circle-xmark deleteProduct"></i>
+      
     </div>
+    <hr style="height: 1px; background-color: black">
       `;
-  cartShopping.innerHTML = cardContent;
-  let cartBody = document.querySelector(".cart-bottom");
-  cartBody.append(cartShopping);
+    cartShopping.innerHTML = cardContent;
+    let cartBody = document.querySelector(".cart-bottom");
+    cartBody.append(cartShopping);
+  }
 }
 
 // ============================================================================================================
@@ -242,6 +254,7 @@ purBtn.addEventListener("click", purBtnClick);
 function purBtnClick() {
   let cartItem = document.querySelectorAll(".cart-product");
   let totalDisplay = document.querySelector(".nav__mount");
+  alert("Thanh toán thành công");
   for (let i = 0; i < cartItem.length; i++) {
     cartItem[i].remove();
   }

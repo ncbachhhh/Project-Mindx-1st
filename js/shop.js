@@ -1,3 +1,229 @@
+let containerProduct = document.getElementById("wrapperProduct");
+const listProduct = [
+  {
+    img: "./imgs/gallery/arrival1.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival2.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival3.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival4.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival5.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival6.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival7.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival8.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival1.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival2.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival3.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival4.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival5.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival6.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival7.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival8.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival1.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival2.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival3.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival4.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival5.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival6.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival7.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival8.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival1.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival2.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival3.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival4.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival5.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival6.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival7.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+  {
+    img: "./imgs/gallery/arrival8.png",
+    name: "Knitted Jumper",
+    star: 5,
+    price: "$ 30.00",
+  },
+];
+let arrElProduct = "";
+for (let i = 0; i < listProduct.length; i++) {
+  let star = "";
+
+  for (let j = 0; j < listProduct[i].star; j++) {
+    star += ' <i class="checked fas fa-star"></i>';
+  }
+
+  const el = `<div class="new-arrivals-product col-xl-3 col-lg-3 col-md-5 col-sm-5 m-1">
+            <div class="single-new-arrival mb-50 text-center ">
+              <div class="popular-img">
+                <img src="${listProduct[i].img}" class = "linkImg" alt="" />
+                <div class="favorit-items store-btn">
+                  <img src="./imgs/gallery/favorit-card.png" alt="" />
+                </div>
+              </div>
+              <div class="popular-caption">
+                <h3>
+                  <a href="shop.html" class="productName">${listProduct[i].name}</a>
+                </h3>
+                <div class="rating mb-10">
+                  ${star}
+                </div>
+                <span class="productPrice">${listProduct[i].price}</span>
+              </div>
+            </div>
+          </div>`;
+  arrElProduct += el;
+}
+containerProduct.innerHTML = arrElProduct;
+
 // SIDEBAR FUNCTION
 const elSidebarButton = document.getElementById("sidebar-icon");
 const elSidebarMenu = document.getElementById("sidebar-menu");
@@ -82,31 +308,44 @@ function formatMoney(value) {
 
 // FUNCTION ADDCART
 function addCart(productImg, productName, productPrice) {
-  let cartShopping = document.createElement("div");
-  cartShopping.classList = "cart-product d-flex justify-content-between";
-  let cartItem = document.querySelectorAll(".cart-product");
-  for (let i = 0; i < cartItem.length; i++) {
-    let productItem = document.querySelectorAll(".cart-product");
-    if (productItem[i].innerHTML == productName) {
-      alert("Sản phẩm đã có trong giỏ");
-      return;
+  let loginCheckCart = JSON.parse(localStorage.getItem("checkLogin"));
+  console.log(loginCheckCart);
+  if (loginCheckCart == false) {
+    alert("Vui lòng đăng nhập");
+    setTimeout(() => {
+      window.open("./login.html");
+    }, 1500);
+  } else {
+    let cartShopping = document.createElement("div");
+    cartShopping.classList =
+      "cart-product d-flex justify-content-between flex-column";
+    let cartItem = document.querySelectorAll(".cart-product");
+    for (let i = 0; i < cartItem.length; i++) {
+      let productItem = document.querySelectorAll(".cart-product");
+      if (productItem[i].innerHTML == productName) {
+        alert("Sản phẩm đã có trong giỏ");
+        return;
+      }
     }
-  }
-  let cardContent = ` 
-    <div>
+    let cardContent = ` 
+    <div class="align-items-center">
       <img src="${productImg}" alt="" />
       <div class="d-flex flex-column gap-2">
         <p class="card-Name">${productName}</p>
         <div>
           <p class="product_price">$ ${productPrice}.00</p>
         </div>
+        
       </div>
       <i class="fa-regular fa-circle-xmark deleteProduct"></i>
+      
     </div>
+    <hr style="height: 1px; background-color: black">
       `;
-  cartShopping.innerHTML = cardContent;
-  let cartBody = document.querySelector(".cart-bottom");
-  cartBody.append(cartShopping);
+    cartShopping.innerHTML = cardContent;
+    let cartBody = document.querySelector(".cart-bottom");
+    cartBody.append(cartShopping);
+  }
 }
 
 // ============================================================================================================
@@ -151,6 +390,7 @@ purBtn.addEventListener("click", purBtnClick);
 function purBtnClick() {
   let cartItem = document.querySelectorAll(".cart-product");
   let totalDisplay = document.querySelector(".nav__mount");
+  alert("Thanh toán thành công");
   for (let i = 0; i < cartItem.length; i++) {
     cartItem[i].remove();
   }

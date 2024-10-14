@@ -101,8 +101,17 @@ header > div {
     cursor: pointer;
     text-decoration: none;
 }
+.header_menu > nav > ul > li > a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: black;
+    text-decoration-color: #9F78FF;
+}
 .header_menu > nav > ul > li > a > p {
     color: black;
+}
+.header_menu > nav > ul > li > a > p:hover {
+    color: #9F78FF;
 }
 /* RIGHT HEADER */
 .header_social > a {
@@ -191,7 +200,7 @@ header > div {
     text-align: center;
 }
 .sidebar-container {
-    background-color: darkslateblue;
+    background-color: #9F78FF;
     padding: 10px 15px;
     border-radius: 8px;
     display: none;
@@ -207,7 +216,11 @@ header > div {
     right: 0;
     top: 12vh;
     z-index: 1000;
-    background-color: rgb(223, 222, 221);
+    background-color: rgb(255, 255, 255);
+}
+.cart-top > p{
+    font-size: 20px;
+    font-weight: 450;
 }
 .cart-bottom {
     height: 70vh;
@@ -224,9 +237,16 @@ header > div {
 .totalPrice {
     height: 100px;
 }
+.totalPrice > p {
+    padding: 10px 0 0 0 ;
+    font-size: 25px;
+}
 .btnPurchase {
-    padding: 3px;
-    background-color: #f4f5f9;
+    padding: 10px;
+    background-color: #9F78FF;
+    color: white;
+    border-radius: 10px;
+    border: none;
 }
 /* =============================CART END============================== */
 /* =============================CAROUSEL START============================== */
@@ -508,7 +528,7 @@ header > div {
         display: block;
     }
     .sidebar-menu {
-        background-color: darkslateblue;
+        background-color: #9F78FF;
         padding: 10px 15px;
         position: fixed;
         z-index: 1000;
@@ -516,6 +536,11 @@ header > div {
         left: 2.5em;
         top: 4.25em;
         border-radius: 10px;
+    }
+    .sidebar-menu > ul > li > a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
     }
     .cart-product > div > img {
         height: 100px;
